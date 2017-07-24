@@ -7,8 +7,8 @@ can use this modified repository, and instructions, to build your own Android Ap
 
 Additional, and more clear, instructions will be added at a later date, however, the general steps are:
 
-1. Install Android Studio
-2. Install Git (if not already installed)
+1. [Install Android Studio](https://developer.android.com/studio/index.html)
+2. [Install Git](https://git-scm.com/downloads) (if not already installed)
 3. Open Android Studio, Select `Check out project from Version Control` and choose `Git`.
 4. Enter the Git Repository URL from GitHub and Clone this Repo into a new Project in Android Studio. *
 5. Edit the `app/src/main/res/values/strings.xml` file and name your application
