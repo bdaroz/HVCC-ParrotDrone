@@ -429,7 +429,14 @@ public class MiniDroneActivity extends AppCompatActivity {
                 switch (mMiniDrone.getFlyingState()) {
                     case ARCOMMANDS_MINIDRONE_PILOTINGSTATE_FLYINGSTATECHANGED_STATE_HOVERING:
                     case ARCOMMANDS_MINIDRONE_PILOTINGSTATE_FLYINGSTATECHANGED_STATE_FLYING:
-                        new MiniDroneRoutine(mMiniDrone);
+                        Thread t = new Thread() {
+                            @Override
+                            public void run() {
+                                super.run();
+                                new MiniDroneRoutine(mMiniDrone);
+                            }
+                        };
+                        t.start();
                 }
             }
         });
