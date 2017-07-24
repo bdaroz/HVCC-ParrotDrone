@@ -34,28 +34,41 @@ public class MiniDroneRoutine {
 
         // Some quick help:
 
-        // Use "mMiniDrone.setRoll(n);" where n is a number from -100 to 100 to fly the drone left or right.
+        // Use "mMiniDrone.setRoll((byte) n);" where n is a number from -100 to 100 to fly the drone left or right.
         // Negative numbers are left, positive right. Use numbers closer to 0 for slower speeds, and closer to
         // +- 100 for faster speeds. 0 to stop the roll.
 
-        // Use "mMiniDrone.setPitch(n);" where n is a number from -100 to 100 to fly the drone forward or backward.
+        // Use "mMiniDrone.setPitch((byte) n);" where n is a number from -100 to 100 to fly the drone forward or backward.
         // Negative numbers are backward, positive forward. Use numbers closer to 0 for slower speeds, and closer to
         // +- 100 for faster speeds. 0 to stop the pitch.
 
-        // Use "mMiniDrone.setFlag(n);" where n is a 0 or 1, to tell the drone to use the pitch and/or roll values,
+        // Use "mMiniDrone.setFlag((byte) n);" where n is a 0 or 1, to tell the drone to use the pitch and/or roll values,
         // if set to 1, or to ignore them, if set to 0. In other words, this needs to be set to 1 if you want to pitch
         // or roll the drone.
 
-        // Use "mMiniDrone.setYaw(n);" where n is a number from -100 to 100 to spin the drone clockwise or
+        // Use "mMiniDrone.setYaw((byte) n);" where n is a number from -100 to 100 to spin the drone clockwise or
         // counterclockwise. Negative numbers are counter-clockwise, positive clockwise. Use numbers closer to 0 for
         // slower speeds, and closer to +- 100 for faster speeds. 0 to stop the spin.
 
-        // Use "mMiniDrone.setGaz(n);" where n is a number from -100 to 100 to fly the drone up or down vertically.
+        // Use "mMiniDrone.setGaz((byte) n);" where n is a number from -100 to 100 to fly the drone up or down vertically.
         // Negative numbers are down, positive up. Use numbers closer to 0 for slower speeds, and closer to
         // +- 100 for faster speeds. 0 to stop the vertical motion.
 
         // Keep in mind these method will return immediately... If you want your drone do maintain an action for
         // some amount of time, you will need to sleep the thread.
-        // Use "Thread.sleep(mills);"
+        // Use "sleep(mills);"
+    }
+
+    /**
+     * Force the thread to sleep. Wrapper around {@link Thread}.sleep().
+     *
+     * @param mills
+     */
+    private void sleep(int mills) { // Do not edit this method
+        try {
+            Thread.sleep(mills);
+        } catch (InterruptedException ex) {
+            // Don't care....
+        }
     }
 }
