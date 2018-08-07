@@ -5,7 +5,7 @@ can use this modified repository, and instructions, to build your own Android Ap
 
 *Currently this project is known to work only with the Parrot Mini Drone.*
 
-Additional, and more clear, instructions will be added at a later date, however, the general steps are:
+The general steps to code your own Android drone app are:
 
 1. [Install Android Studio](https://developer.android.com/studio/index.html)
 2. [Install Git](https://git-scm.com/downloads) (if not already installed)
@@ -17,7 +17,10 @@ class. This is the routine that will run when the button is pushed in flight. (A
 in that method.)
 7. Run the Gradle `assemble` task. Two `.apk` files will be placed in the `app/build/outputs/apk/` directory.
 8. Transfer the `app-debug.apk` file (it may be named slightly differently) to your Android Device and install.
-9. Run the app, connect to your drone, take-off and press the `Execute Program` button to run your code.
+9. Connect to your drone using Bluetooth**
+10. Run the app, take-off and press the `Execute Program` button to run your code.
 
 *Note: If you want to use source code control while writing your app, and you have a GitHub account, you can fork this
 repo to your account and then clone from your fork.
+
+**If you get a white screen when you start your app, make sure your Bluetooth is enabled and you are connected to the drone. 
